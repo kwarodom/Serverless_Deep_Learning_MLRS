@@ -7,22 +7,22 @@ from urllib.request import urlretrieve
 import json
 
 SESSION = None
-strBucket = 'serverlessdeeplearning'
+strBucket = 'mlrsserverlessaws'
 
 def handler(event, context):
     global strBucket
     if not os.path.exists('/tmp/imagenet/'):
         os.makedirs('/tmp/imagenet/')
 
-    strFile = '/tmp/imagenet/inputimage.jpg'
+    strFile = '/tmp/imagenet/inputimage.png'
 
-    downloadFromS3(strBucket,'imagenet/inputimage.jpg',strFile)
+    downloadFromS3(strBucket,'imagenet/inputimage.png',strFile)
 
     global SESSION
     if SESSION is None:
     	downloadFromS3(strBucket,'imagenet/imagenet_2012_challenge_label_map_proto.pbtxt','/tmp/imagenet/imagenet_2012_challenge_label_map_proto.pbtxt')
     	downloadFromS3(strBucket,'imagenet/imagenet_synset_to_human_label_map.txt','/tmp/imagenet/imagenet_synset_to_human_label_map.txt')
-    image = os.path.join('/tmp/imagenet/', 'inputimage.jpg')
+    image = os.path.join('/tmp/imagenet/', 'inputimage.png')
     strResult = run_inference_on_image(image)
 
     return strResult

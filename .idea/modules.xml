@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Serverless_Deep_Learning_MLRS.iml" filepath="$PROJECT_DIR$/.idea/Serverless_Deep_Learning_MLRS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../enerkey_backend/.idea/enerkey_backend.iml" filepath="$PROJECT_DIR$/../enerkey_backend/.idea/enerkey_backend.iml" />
     </modules>
   </component>
 </project>
