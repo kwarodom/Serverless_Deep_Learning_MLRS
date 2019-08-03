@@ -8,7 +8,7 @@
       "stage": "dev",
       "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*]+?)}",
       "name": "aws",
-      "region": "us-east-1",
+      "region": "ap-southeast-1",
       "runtime": "python3.6",
       "memorySize": 1536,
       "timeout": 60,
@@ -19,7 +19,7 @@
             "s3:ListBucket"
           ],
           "Resource": [
-            "arn:aws:s3:::serverlessdeeplearningarm"
+            "arn:aws:s3:::mlrsserverlessaws"
           ]
         },
         {
@@ -28,7 +28,7 @@
             "s3:GetObject"
           ],
           "Resource": [
-            "arn:aws:s3:::serverlessdeeplearningarm/*"
+            "arn:aws:s3:::mlrsserverlessaws/*"
           ]
         }
       ],
@@ -147,7 +147,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/deeplearninglambda/dev/1564678885634-2019-08-01T17:01:25.634Z/deeplearninglambda.zip"
+                "S3Key": "serverless/deeplearninglambda/dev/1564855283927-2019-08-03T18:01:23.927Z/deeplearninglambda.zip"
               },
               "FunctionName": "deeplearninglambda-dev-main",
               "Handler": "index.handler",
@@ -166,14 +166,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "MainLambdaVersionzjFjW2UymIYNdUPXJmyFGGSzfnR43F2nePVvOdIzSI": {
+          "MainLambdaVersion7RY3HFKSIpKKRzXwvICCOnN29NeBB1qIrXghbCPWU8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "MainLambdaFunction"
               },
-              "CodeSha256": "Pr8TF7RBPI8thfM0IRpIWz2oqw6Z4FecrzltTt5guZE="
+              "CodeSha256": "Yh+dyqn3Rej7qbSljpeGIHdMLXb9fEdQgJUVbaquhKg="
             }
           }
         },
@@ -186,7 +186,7 @@
           "MainLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "MainLambdaVersionzjFjW2UymIYNdUPXJmyFGGSzfnR43F2nePVvOdIzSI"
+              "Ref": "MainLambdaVersion7RY3HFKSIpKKRzXwvICCOnN29NeBB1qIrXghbCPWU8"
             }
           }
         }
@@ -235,10 +235,10 @@
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "artifact": "/Users/kwarodom/Workspace/Hands-On-Serverless-Deep-Learning-with-TensorFlow-and-AWS-Lambda/Chapter04/lesson4.4/.serverless/deeplearninglambda.zip"
+    "artifact": "/Users/kwarodom/Workspace/Serverless_Deep_Learning_MLRS/lab3/lab3.2/.serverless/deeplearninglambda.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/deeplearninglambda/dev/1564678885634-2019-08-01T17:01:25.634Z",
+    "artifactDirectoryName": "serverless/deeplearninglambda/dev/1564855283927-2019-08-03T18:01:23.927Z",
     "artifact": "deeplearninglambda.zip"
   }
 }
