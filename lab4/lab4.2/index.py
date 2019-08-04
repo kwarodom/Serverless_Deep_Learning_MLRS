@@ -7,7 +7,7 @@ from urllib.request import urlretrieve
 import json
 
 SESSION = None
-strBucket = 'serverlessdeeplearning'
+strBucket = 'mlrsserverlessaws'
 
 def handler(event, context):
     global strBucket
